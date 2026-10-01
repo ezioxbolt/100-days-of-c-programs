@@ -2,26 +2,28 @@
 
 int main()
 {
-    int i, j;
+    int n, i, j;
+    int count;
 
-    for (i = 1; i <= 5; i++)
+    printf("Enter n: ");
+    scanf("%d", &n);
+
+    for (i = 2; i <= n; i++)
     {
-        for (j = 1; j <= 2 * i - 1; j++)
+        count = 0;
+
+        for (j = 1; j <= i; j++)
         {
-            printf("*");
+            if (i % j == 0)
+            {
+                count++;
+            }
         }
 
-        printf("\n");
-    }
-
-    for (i = 4; i >= 1; i--)
-    {
-        for (j = 1; j <= 2 * i - 1; j++)
+        if (count == 2)
         {
-            printf("*");
+            printf("%d ", i);
         }
-
-        printf("\n");
     }
 
     return 0;

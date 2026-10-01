@@ -2,36 +2,20 @@
 
 int main()
 {
-    int i, j;
+    int a[100];
+    int n, i;
 
-    for (i = 1; i <= 4; i++)
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++)
     {
-        for (j = 1; j <= 4 - i; j++)
-        {
-            printf(" ");
-        }
-
-        for (j = 1; j <= 2 * i - 1; j++)
-        {
-            printf("*");
-        }
-
-        printf("\n");
+        scanf("%d", &a[i]);
     }
 
-    for (i = 3; i >= 1; i--)
+    for (i = 0; i < n; i++)
     {
-        for (j = 1; j <= 4 - i; j++)
-        {
-            printf(" ");
-        }
-
-        for (j = 1; j <= 2 * i - 1; j++)
-        {
-            printf("*");
-        }
-
-        printf("\n");
+        printf("%d ", a[i]);
     }
 
     return 0;
